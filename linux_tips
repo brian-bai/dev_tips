@@ -1,0 +1,13 @@
+#crontab -e
+#m h dom mon dow commnad
+* * * * * date >> ~/time.log
+sudo service cron restart
+
+#NO_PUBLIC_KEY issue
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys KEYID
+#replace KEYID with the number shown in the error message
+
+#notification
+notify-send 'title' 'body'
+
+
