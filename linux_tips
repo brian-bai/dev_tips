@@ -6,8 +6,11 @@ sudo service cron restart
 grep CRON /var/log/syslog
 #cron mail
 sudo apt-get install postfix
-sudo tail -f /var/mail/brian
+sudo tail -f /var/mail/brian -n 50
 #cron set PATH to load usr module
+
+#cron to launch chromedriver-add following line in first line of crontab
+DISPLAY=:0
 
 #NO_PUBLIC_KEY issue
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys KEYID
