@@ -10,4 +10,6 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys KEYID
 #notification
 notify-send 'title' 'body'
 
+#show automount vboxsf
+sudo adduser brian vboxsf
 
