@@ -2,6 +2,12 @@
 #m h dom mon dow commnad
 * * * * * date >> ~/time.log
 sudo service cron restart
+#cron log
+grep CRON /var/log/syslog
+#cron mail
+sudo apt-get install postfix
+sudo tail -f /var/mail/brian
+#cron set PATH to load usr module
 
 #NO_PUBLIC_KEY issue
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys KEYID
