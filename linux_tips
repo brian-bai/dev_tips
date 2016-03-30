@@ -22,3 +22,5 @@ notify-send 'title' 'body'
 #show automount vboxsf
 sudo adduser brian vboxsf
 
+#count files
+ls -f . | wc -l
