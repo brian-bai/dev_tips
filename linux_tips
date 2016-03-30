@@ -16,7 +16,7 @@ DISPLAY=:0
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys KEYID
 #replace KEYID with the number shown in the error message
 
-#notification
+#notification (cron DISPLAY=:0)
 notify-send 'title' 'body'
 
 #show automount vboxsf
