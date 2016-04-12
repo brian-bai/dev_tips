@@ -22,3 +22,21 @@ notify-send 'title' 'body'
 #show automount vboxsf
 sudo adduser brian vboxsf
 
+#Count the number of files in a current directory
+ls -f . | wc -l
+find . -type f -maxdepth 1 | wc -l
+#Count the number of files recursively
+find . -type f | wc -l
+#Count the number of folders recursively
+find . -type d | wc -l
+#Count the number of files by "file type"
+#recursively counts the number of files, with ".txt" extension,
+#in a current directory and all its sub-directories 
+find . -type f -name "*.txt" | wc -l
+#Count the number of folders recursively
+find . -type d | wc -l
+
+#display disk usage
+du -h
+du -sh *
+du -csh *

@@ -1,0 +1,2 @@
+#nosetests to exec only one method
+nosetests /path/to/test.py:test_function --logging-level=INFO	
