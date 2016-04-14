@@ -40,3 +40,10 @@ find . -type d | wc -l
 du -h
 du -sh *
 du -csh *
+
+#remove duplicates line from a file
+#sed '!seen[$0]++' <filename>
+
+#fix the unstable wifi 
+echo 'options iwlwifi 11n_disable=1' | sudo tee -a /etc/modprobe.d/iwlwifi.conf
+reboot
