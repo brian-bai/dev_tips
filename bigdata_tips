@@ -1,0 +1,8 @@
+#ambari-admin-password-reset
+
+#OutOfMemoryError when using Tez engine for hive query
+#set the java opts 80 percent of container size
+hive> SET hive.tez.container.size=2250;
+hive> SET hive.tez.java.opts=-Xmx1600M;
+
+
