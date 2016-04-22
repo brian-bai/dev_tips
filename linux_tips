@@ -40,3 +40,9 @@ find . -type d | wc -l
 du -h
 du -sh *
 du -csh *
+
+#check memory usage
+cat /proc/memoinfo
+free -m 
+top
+vmstat
