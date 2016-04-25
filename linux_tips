@@ -53,3 +53,7 @@ vmstat
 #fix the unstable wifi 
 echo 'options iwlwifi 11n_disable=1' | sudo tee -a /etc/modprobe.d/iwlwifi.conf
 reboot
+
+#interrupting docker pull
+# Repository xxxx already being pulled by another client. Waiting.
+sudo service docker restart
