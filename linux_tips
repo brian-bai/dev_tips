@@ -63,3 +63,10 @@ sudo service docker restart
 sudo docker run --rm --label=jekyll --volume=$(pwd):/srv/jekyll \
   -it -p 127.0.0.1:4000:4000 jekyll/jekyll
 
+#python2 notebook
+sudo docker run -p 8888:8888 -v "$(pwd):/home/ds/notebooks" dataquestio/python2-starter
+
+#save images
+sudo docker save xxxx > target.tar
+#load image
+sudo docker load < target.tar
