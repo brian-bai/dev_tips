@@ -70,3 +70,10 @@ sudo docker run -p 8888:8888 -v "$(pwd):/home/ds/notebooks" dataquestio/python2-
 sudo docker save xxxx > target.tar
 #load image
 sudo docker load < target.tar
+#mac ox
+docker-machine ip
+#container shell
+docker exec -it 4greg24134 /bin/bash
+exit
+
+
