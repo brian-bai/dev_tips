@@ -40,7 +40,7 @@ find . -type d | wc -l
 du -h
 du -sh *
 du -csh *
-
+df -h
 #check memory usage
 cat /proc/memoinfo
 free -m 
@@ -75,5 +75,11 @@ docker-machine ip
 #container shell
 docker exec -it 4greg24134 /bin/bash
 exit
+#ignore the switch lid
+sudo -H gedit /etc/systemd/logind.conf
+#Add a line HandleLidSwitch=ignore (make sure it's not commented out!),
+#Restart the systemd daemon with this command:
+#sudo restart systemd-logind / or reboot
 
-
+#install deb
+sudo dpkg -i xxx.deb

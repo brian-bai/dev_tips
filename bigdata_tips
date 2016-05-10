@@ -5,4 +5,9 @@
 hive> SET hive.tez.container.size=2250;
 hive> SET hive.tez.java.opts=-Xmx1600M;
 
+#Transparent Huge pages issue
+echo never > /sys/kernel/mm/redhat_transparent_hugepage/defrag
+echo never > /sys/kernel/mm/redhat_transparent_hugepage/enabled
+echo never > /sys/kernel/mm/transparent_hugepage/enabled
+echo never > /sys/kernel/mm/transparent_hugepage/defrag
 
