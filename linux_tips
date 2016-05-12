@@ -1,3 +1,7 @@
+#os version
+cat /proc/version
+lsb_release -a
+uname -a
 #crontab -e
 #m h dom mon dow commnad
 * * * * * date >> ~/time.log
@@ -83,3 +87,10 @@ sudo -H gedit /etc/systemd/logind.conf
 
 #install deb
 sudo dpkg -i xxx.deb
+
+#box resize
+VBoxManage clonehd box-disk1.vmdk tmp-disk.vdi --format vdi
+VBoxManage modifyhd tmp-disk.vdi --resize 61440
+VBoxManage clonehd tmp-disk.vdi resized-disk.vmdk --format vmdk
+rm tmp-disk.vdi box-disk1.vmdk
+mv resized-disk.vmdk box-disk1.vmdk

@@ -11,3 +11,10 @@ echo never > /sys/kernel/mm/redhat_transparent_hugepage/enabled
 echo never > /sys/kernel/mm/transparent_hugepage/enabled
 echo never > /sys/kernel/mm/transparent_hugepage/defrag
 
+#ambari cluster installation
+cluster names all
+retain localhost config but remove bind to hostname
+
+#zeppelin
+VERSION=`hdp-select status hadoop-client | sed 's/hadoop-client - \([0-9].[0-9]\).*/\1/'`
+git clone https://github.com/hortonworks-gallery/ambari-zeppelin-service.git  /var/lib/ambari-server/resources/stacks/HDP/$VERSION/services/ZEPPELIN
