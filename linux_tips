@@ -69,6 +69,11 @@ sudo docker run --rm --label=jekyll --volume=$(pwd):/srv/jekyll \
 
 #python2 notebook
 sudo docker run -p 8888:8888 -v "$(pwd):/home/ds/notebooks" dataquestio/python2-starter
+sudo docker ps
+sudo docker stop xxxxx
+
+$CUR_CONTAINER=`sudo docker ps|pyp "pp[1].split(' ')[0]`
+sudo docker stop $CUR_CONTAINER
 
 #save images
 sudo docker save xxxx > target.tar
