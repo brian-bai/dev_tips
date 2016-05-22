@@ -111,3 +111,7 @@ ssh-agent bash
 ssh-add ~/.ssh/id_rsa
 #after vagrant authorized_keys deleted by mistake
 config.ssh.username and config.ssh.password
+#Jupyter notebook config
+jupyter notebook --generate-config
+#set ip address
+sudo ifconfig eth0 192.168.1.132 netmask 255.255.255.0
