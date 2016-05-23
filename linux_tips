@@ -115,3 +115,5 @@ config.ssh.username and config.ssh.password
 jupyter notebook --generate-config
 #set ip address
 sudo ifconfig eth0 192.168.1.132 netmask 255.255.255.0
+#Shorten prompt
+PS1='\u:\W\$ '
