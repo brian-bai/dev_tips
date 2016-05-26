@@ -1,3 +1,5 @@
+#simple server
+python -m http.server
 #os version
 cat /proc/version
 lsb_release -a
