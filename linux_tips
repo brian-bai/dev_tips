@@ -71,6 +71,11 @@ sudo docker run --rm --label=jekyll --volume=$(pwd):/srv/jekyll \
 
 #python2 notebook
 sudo docker run -p 8888:8888 -v "$(pwd):/home/ds/notebooks" dataquestio/python2-starter
+sudo docker ps
+sudo docker stop xxxxx
+
+$CUR_CONTAINER=`sudo docker ps|pyp "pp[1].split(' ')[0]`
+sudo docker stop $CUR_CONTAINER
 
 #save images
 sudo docker save xxxx > target.tar
@@ -81,6 +86,8 @@ docker-machine ip
 #container shell
 docker exec -it 4greg24134 /bin/bash
 exit
+#persistent container
+sudo docker commit [container_id] [name/tag]
 #ignore the switch lid
 sudo -H gedit /etc/systemd/logind.conf
 #Add a line HandleLidSwitch=ignore (make sure it's not commented out!),
@@ -104,3 +111,21 @@ sudo apt-get install openssh-server
 # avoid input password when ssh
 ssh-agent bash
 ssh-add ~/.ssh/id_rsa
+#after vagrant authorized_keys deleted by mistake
+config.ssh.username and config.ssh.password
+#Jupyter notebook config
+jupyter notebook --generate-config
+#set ip address
+sudo ifconfig eth0 192.168.1.132 netmask 255.255.255.0
+#Shorten prompt
+PS1='\u:\W\$ '
+#grep words in files
+grep -r 'words' path/to/file/
+#run job in bg
+ipython notebook &
+#list bg job
+jobs
+#kill bg job
+kill %1 && fg
+#bring job back
+fg
