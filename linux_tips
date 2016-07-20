@@ -127,3 +127,4 @@ jobs
 kill %1 && fg
 #bring job back
 fg
+#search and vi
