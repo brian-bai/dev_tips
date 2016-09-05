@@ -129,8 +129,8 @@ jobs
 kill %1 && fg
 #bring job back
 fg
-# pyspark notebook
-# PYSPARK_DRIVER_PYTHON=ipython PYSPARK_DRIVER_PYTHON_OPTS="notebook" pyspark --executer-memory 7g
+# pyspark notebook config in .bashrc
+alias sparknb=PYSPARK_DRIVER_PYTHON=ipython PYSPARK_DRIVER_PYTHON_OPTS="notebook" pyspark --executer-memory 7g
 export SPARK_HOME="/home/brian/tools/spark-2.0.0-bin-hadoop2.7"
 export PATH=$SPARK_HOME/bin:$PATH
 export PATH=$SPARK_HOME/sbin:$PATH
