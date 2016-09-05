@@ -1,3 +1,5 @@
+#simple server
+python -m http.server
 #os version
 cat /proc/version
 lsb_release -a
@@ -132,3 +134,4 @@ fg
 export SPARK_HOME="/home/brian/tools/spark-2.0.0-bin-hadoop2.7"
 export PATH=$SPARK_HOME/bin:$PATH
 export PATH=$SPARK_HOME/sbin:$PATH
+#search and vi
