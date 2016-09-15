@@ -42,6 +42,13 @@ find . -type f -name "*.txt" | wc -l
 #Count the number of folders recursively
 find . -type d | wc -l
 
+#sort by time
+ls -lt
+ls -ltr
+#sort by size
+ls -lS
+ls -lSr
+
 #display disk usage
 du -h
 du -sh *
