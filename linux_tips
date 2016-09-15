@@ -144,3 +144,13 @@ fg
 export SPARK_HOME="/home/brian/tools/spark-2.0.0-bin-hadoop2.7"
 export PATH=$SPARK_HOME/bin:$PATH
 export PATH=$SPARK_HOME/sbin:$PATH
+#hadoop config
+#topology edit
+ansible horton -a "cp -f /vagrant/topology_mappings.data /etc/hadoop/conf/" -u root
+#check racks
+su hdfs
+hdfs fsck -racks
+hdfs dfsadmin -report
+#yarn
+yarn application -list
+yarn logs -applicationId application_xxxxx_xx
