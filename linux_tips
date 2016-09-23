@@ -154,3 +154,7 @@ hdfs dfsadmin -report
 #yarn
 yarn application -list
 yarn logs -applicationId application_xxxxx_xx
+
+#grub
+sudo vi /etc/default/grub
+sudo update-grub
