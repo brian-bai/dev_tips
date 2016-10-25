@@ -28,6 +28,9 @@ notify-send 'title' 'body'
 #show automount vboxsf
 sudo adduser brian vboxsf
 
+#network service restart
+sudo /etc/init.d/networking restart
+
 #Count the number of files in a current directory
 ls -f . | wc -l
 find . -type f -maxdepth 1 | wc -l
@@ -41,6 +44,8 @@ find . -type d | wc -l
 find . -type f -name "*.txt" | wc -l
 #Count the number of folders recursively
 find . -type d | wc -l
+#suppress warning
+find . -type f -name "*.py" 2>/dev/null
 
 #sort by time
 ls -lt
