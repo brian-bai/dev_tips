@@ -46,6 +46,8 @@ find . -type f -name "*.txt" | wc -l
 find . -type d | wc -l
 #suppress warning
 find . -type f -name "*.py" 2>/dev/null
+#find and copy
+find . -type f -name "*.py" -exec cp {} /tmp/pdfs \;
 
 #sort by time
 ls -lt
