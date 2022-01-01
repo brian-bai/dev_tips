@@ -1,0 +1,30 @@
+# get the screen device and change the screen brightness
+xrandr | grep " connected" | cut -f1 -d " "
+xrandr --output LVDS-0 --brightness 0.8
+# bash-it installation information
+Installing bash-it
+Would you like to keep your .bashrc and append bash-it templates at the end? [y/N] y
+Your original .bashrc has been backed up to .bashrc.bak
+Bash-it template has been added to your .bashrc
+
+Enabling reasonable defaults
+bash-it enabled with priority 350.
+system enabled with priority 350.
+base enabled with priority 250.
+alias-completion enabled with priority 365.
+general enabled with priority 150.
+
+Installation finished successfully! Enjoy bash-it!
+To start using it, open a new tab or 'source ~/.bashrc'.
+
+To show the available aliases/completions/plugins, type one of the following:
+  bash-it show aliases
+  bash-it show completions
+  bash-it show plugins
+
+To avoid issues and to keep your shell lean, please enable only features you really want to use.
+Enabling everything can lead to issues.
+# check GPU
+lspci | grep -i vga
+# terminal copy & paste
+# ctrl+shift+c & v
