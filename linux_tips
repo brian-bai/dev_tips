@@ -165,3 +165,6 @@ yarn logs -applicationId application_xxxxx_xx
 #grub
 sudo vi /etc/default/grub
 sudo update-grub
+
+#vboxshared folder permission denied fix
+sudo adduser $USER vboxsf
