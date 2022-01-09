@@ -28,3 +28,6 @@ Enabling everything can lead to issues.
 lspci | grep -i vga
 # terminal copy & paste
 # ctrl+shift+c & v
+# mac os preview file full path
+Simply ⌘+Click on it's name in the title bar or secondary click (right click) on it .
+
