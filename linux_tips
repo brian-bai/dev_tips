@@ -178,3 +178,11 @@ remote> cat id_rsa.pub >> authorized_keys2
 remote> chmod 640 authorized_keys2
 remote> rm id_rsa.pub
 remote> exit
+# qemu headless
+> ./start_headless_ubuntu.sh
+local> ssh user@remote
+# show pid
+local> ps 
+# shutdown
+remote> sudo shutdown 
+

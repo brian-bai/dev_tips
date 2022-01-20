@@ -4,4 +4,5 @@ qemu-system-x86_64 -machine type=q35,accel=hvf \
        	-vga std \
  	-usb -device usb-tablet \
        	-display default,show-cursor=on -cpu Nehalem \
-        -net user,hostfwd=tcp::3333-:22 -net nic &
+        -net user,hostfwd=tcp::3333-:22 -net nic \
+	-nographic &
