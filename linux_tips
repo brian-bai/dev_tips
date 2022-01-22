@@ -186,3 +186,8 @@ local> ps
 # shutdown
 remote> sudo shutdown 
 
+#vncview screen unlock
+loginctl list-sessions
+loginctl unlock-session $session
+# or
+loginctl unlist-sessions
