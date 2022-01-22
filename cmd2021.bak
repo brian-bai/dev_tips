@@ -28,3 +28,26 @@ Enabling everything can lead to issues.
 lspci | grep -i vga
 # terminal copy & paste
 # ctrl+shift+c & v
+
+# open tips file for memo (check .bashrc alias tip)
+> tip
+
+# set vs code terminal font
+cd /usr/share/fonts/truetype/
+sudo git clone https://github.com/abertsch/Menlo-for-Powerline.git
+sudo fc-cache -f -v
+"terminal.integrated.fontFamily": "Menlo for Powerline",
+
+#shortcut
+ctrl + alt + up/down : switch workspace
+shift + super + pgDn : move windows one workspace down
+
+# rust build erro: Blocking waiting for file lock on package cache
+rm ~/.cargo/.package-cache
+
+# install R on ubuntu 20.04
+381  sudo apt install dirmngr gnupg apt-transport-https ca-certificates software-properties-common
+382  sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+383  sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/'
+384  sudo apt install r-base
+385  R --version
