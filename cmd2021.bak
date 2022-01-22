@@ -51,3 +51,7 @@ rm ~/.cargo/.package-cache
 383  sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/'
 384  sudo apt install r-base
 385  R --version
+=======
+# mac os preview file full path
+Simply ⌘+Click on it's name in the title bar or secondary click (right click) on it .
+

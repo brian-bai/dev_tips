@@ -165,3 +165,24 @@ yarn logs -applicationId application_xxxxx_xx
 #grub
 sudo vi /etc/default/grub
 sudo update-grub
+
+#vboxshared folder permission denied fix
+sudo adduser $USER vboxsf
+# qemu ssh
+remote> sudo systemctl restart sshd.service
+local> cd ~/.ssh
+local> scp id_rsa.pub user@remote:~/.ssh/id_rsa.pub
+local> ssh user@remote
+remote> cd ~/.ssh
+remote> cat id_rsa.pub >> authorized_keys2
+remote> chmod 640 authorized_keys2
+remote> rm id_rsa.pub
+remote> exit
+# qemu headless
+> ./start_headless_ubuntu.sh
+local> ssh user@remote
+# show pid
+local> ps 
+# shutdown
+remote> sudo shutdown 
+
