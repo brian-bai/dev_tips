@@ -191,3 +191,12 @@ loginctl list-sessions
 loginctl unlock-session $session
 # or
 loginctl unlist-sessions
+# show vncserver status
+vncserver -list
+# show system service
+systemctl --type service --all
+systemctl --type service --state running
+service --status-all
+service --status-all | grep '\[ + \]'
+ls /etc/init.d
+#To show all installed unit files use 'systemctl list-unit-files'.
