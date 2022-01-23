@@ -1,0 +1,23 @@
+# C++20 compile
+gcc-11 -std=c++20 -lstdc++ course_shift.cpp -o shift
+clang++ -std=c++20 courses.cpp -o course
+
+#shell script for ubuntu cpp compile
+function cppcompile()
+{
+  filename=$1
+  re="^\#include \""
+  while read -r line
+  do
+    if [[ $line =~ $re ]]; then
+      temp=${line:9}
+      temp1=${temp#\"}
+      temp2=${temp1%\.*\"}
+      g++ -std=c++20 -lstdc++ -c "$temp2".cpp
+    fi
+  done < "$filename".cpp
+  g++ -std=c++20 -lstdc++ -c "$filename".cpp
+  g++ -lstdc++ -o "$filename" ./*.o
+  "./$filename"
+  rm ./*.o
+}
