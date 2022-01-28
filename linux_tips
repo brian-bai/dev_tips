@@ -135,6 +135,9 @@ sudo ifconfig eth0 192.168.1.132 netmask 255.255.255.0
 PS1='\u:\W\$ '
 #grep words in files
 grep -r 'words' path/to/file/
+#grep in dir
+grep -rni "std=c++" *
+find . -type f -exec grep -H "std=c++" {} \;
 #run job in bg
 ipython notebook &
 #list bg job
