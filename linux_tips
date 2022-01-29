@@ -206,3 +206,20 @@ ls /etc/init.d
 
 # check port
 sudo lsof -i -P | grep LISTEN
+
+# To remove a file extension from all files 
+for i in $( ls *.txt ); do mv $i ${i%.*}; done
+
+# change all files with the .log extension to .txt. 
+for i in *.log; do mv -- "$i" "${i%.log}.txt"; done
+
+# check weather
+curl wttr.in
+
+# cmatrix
+# neofetch
+# htop
+# glances
+# cmus
+# sl
+
