@@ -203,3 +203,6 @@ service --status-all
 service --status-all | grep '\[ + \]'
 ls /etc/init.d
 #To show all installed unit files use 'systemctl list-unit-files'.
+
+# check port
+sudo lsof -i -P | grep LISTEN
