@@ -193,7 +193,7 @@ remote> sudo shutdown
 loginctl list-sessions
 loginctl unlock-session $session
 # or
-loginctl unlist-sessions
+loginctl unlock-sessions
 # show vncserver status
 vncserver -list
 # show system service
@@ -222,4 +222,17 @@ curl wttr.in
 # glances
 # cmus
 # sl
+# iotop
+# iftop
+# vmstat -m
+# vmstat -d
+# tcpdump
+# netstat -st
+# lsof
+# pstree
+# nethogs
+# mpstat
+# free -m
+# ac -d
+
 
