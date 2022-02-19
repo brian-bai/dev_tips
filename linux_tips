@@ -206,6 +206,15 @@ ls /etc/init.d
 
 # check port
 sudo lsof -i -P | grep LISTEN
+sudo netstat -tunlp
+
+The options used in this command have the following meaning:
+
+    -t - Show TCP ports.
+    -u - Show UDP ports.
+    -n - Show numerical addresses instead of resolving hosts.
+    -l - Show only listening ports.
+    -p - Show the PID and name of the listener’s process. This information is shown only if 
 
 # To remove a file extension from all files 
 for i in $( ls *.txt ); do mv $i ${i%.*}; done
@@ -235,4 +244,9 @@ curl wttr.in
 # free -m
 # ac -d
 
+# rename 's/^\S+(P\S+)$/$1/' *
 
+# tmux ls
+# tmux attatch -t [name]
+# ctrl + b d   #detach session
+# ctrl + b x   #kill session
