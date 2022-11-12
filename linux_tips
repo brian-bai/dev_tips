@@ -186,3 +186,7 @@ local> ps
 # shutdown
 remote> sudo shutdown 
 
+# check graphics driver
+glxinfo -B
+lspci -nn | grep -E 'VGA|Display'
+sudo lshw -C video
