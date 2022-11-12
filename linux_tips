@@ -135,6 +135,9 @@ sudo ifconfig eth0 192.168.1.132 netmask 255.255.255.0
 PS1='\u:\W\$ '
 #grep words in files
 grep -r 'words' path/to/file/
+#grep in dir
+grep -rni "std=c++" *
+find . -type f -exec grep -H "std=c++" {} \;
 #run job in bg
 ipython notebook &
 #list bg job
@@ -190,3 +193,65 @@ remote> sudo shutdown
 glxinfo -B
 lspci -nn | grep -E 'VGA|Display'
 sudo lshw -C video
+
+#vncview screen unlock
+loginctl list-sessions
+loginctl unlock-session $session
+# or
+loginctl unlock-sessions
+# show vncserver status
+vncserver -list
+# show system service
+systemctl --type service --all
+systemctl --type service --state running
+service --status-all
+service --status-all | grep '\[ + \]'
+ls /etc/init.d
+#To show all installed unit files use 'systemctl list-unit-files'.
+
+# check port
+sudo lsof -i -P | grep LISTEN
+sudo netstat -tunlp
+
+The options used in this command have the following meaning:
+
+    -t - Show TCP ports.
+    -u - Show UDP ports.
+    -n - Show numerical addresses instead of resolving hosts.
+    -l - Show only listening ports.
+    -p - Show the PID and name of the listener’s process. This information is shown only if 
+
+# To remove a file extension from all files 
+for i in $( ls *.txt ); do mv $i ${i%.*}; done
+
+# change all files with the .log extension to .txt. 
+for i in *.log; do mv -- "$i" "${i%.log}.txt"; done
+
+# check weather
+curl wttr.in
+
+# cmatrix
+# neofetch
+# htop
+# glances
+# cmus
+# sl
+# iotop
+# iftop
+# vmstat -m
+# vmstat -d
+# tcpdump
+# netstat -st
+# lsof
+# pstree
+# nethogs
+# mpstat
+# free -m
+# ac -d
+
+# rename 's/^\S+(P\S+)$/$1/' *
+
+# tmux ls
+# tmux attatch -t [name]
+# ctrl + b d   #detach session
+# ctrl + b x   #kill session

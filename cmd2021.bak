@@ -54,4 +54,5 @@ rm ~/.cargo/.package-cache
 =======
 # mac os preview file full path
 Simply ⌘+Click on it's name in the title bar or secondary click (right click) on it .
+# disable proxy when installing extension for vscode remote container.
 
