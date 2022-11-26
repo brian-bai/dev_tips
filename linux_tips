@@ -60,6 +60,7 @@ ls -lSr
 du -h
 du -sh *
 du -csh *
+du -hc --max-depth=1
 df -h
 #check memory usage
 cat /proc/memoinfo
