@@ -1,0 +1,28 @@
+theme="onedark"
+
+[editor]
+line-number = "relative"
+mouse = false
+bufferline = "always"
+
+[editor.gutters]
+layout = ["diff", "diagnostics", "line-numbers", "spacer"]
+
+[editor.statusline]
+left = ["mode","spinner","version-control", "file-modification-indicator"]
+center = ["file-name"]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+
+[editor.lsp]
+display-inlay-hints = true
+display-messages = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
